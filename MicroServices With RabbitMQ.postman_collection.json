@@ -1,0 +1,120 @@
+{
+	"info": {
+		"_postman_id": "0e1c4249-3582-4531-aad8-d45b17fe61b0",
+		"name": "MicroServices With RabbitMQ",
+		"description": "**Creating RabbitMQ Cloud platform**\n\n[https://customer.cloudamqp.com/login<br>](https://customer.cloudamqp.com/login)[santhiveerapandi@gmail.com](https://mailto:santhiveerapandi@gmail.com)  \n[<br>Sample RabbitMQ Queue Monitoring HOST<br>https://puffin-01.rmq2.cloudamqp.com/#/](https://puffin-01.rmq2.cloudamqp.com/#/)\n\n**User:** ccgvxmpi\n\n**Password:** 3pvqu0V6pe7CqOvsWTZvyI4Etayq3vhU\n\nDocker containers have Microservices in our local:  \nProduct Services, & Order Services.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1998241"
+	},
+	"item": [
+		{
+			"name": "Product Services",
+			"item": [
+				{
+					"name": "127.0.0.1:8080/api/products/4",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "127.0.0.1:8080/api/products/4",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"products",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "127.0.0.1:8080/api/products",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Santhiveerapandi Hanie's awsome Product",
+									"type": "default"
+								},
+								{
+									"key": "price",
+									"value": "700",
+									"type": "default"
+								},
+								{
+									"key": "inventory",
+									"value": "50",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "127.0.0.1:8080/api/products",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"products"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Order Services",
+			"item": [
+				{
+					"name": "localhost:8081/api/orders",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "product_id",
+									"value": "4",
+									"type": "default"
+								},
+								{
+									"key": "count",
+									"value": "10",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8081/api/orders",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"orders"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

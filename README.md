@@ -97,10 +97,18 @@ src/config/queue.php
 https://customer.cloudamqp.com
 Login with Gmail
 
+
+```docker network ls```
+
+```docker network create shopping```
+
+``` docker-compose build ```
+
+``` docker-compose up -d ```
+
 ## Queue
 1. ```docker compose exec product_app php artisan queue:work```
 2. ```docker compose exec order_app php artisan queue:work```
-
 
 
 ## Medium
